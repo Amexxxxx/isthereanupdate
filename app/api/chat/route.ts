@@ -1,19 +1,11 @@
 import { NextResponse } from 'next/server';
 import OpenAI from 'openai';
-import { rateLimit } from '@/lib/rate-limit';
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY || "",
 });
 
 export async function POST(request: Request) {
-  const ip = request.headers.get('x-forwarded-for') || 'unknown';
-  const { success } = rateLimit(ip, 'chat', 10, 60 * 1000); // 10 requests per minute
-
-  if (!success) {
-    return NextResponse.json({ error: 'Too many requests. Please try again later.' }, { status: 429 });
-  }
-
   if (!process.env.OPENAI_API_KEY) {
     return NextResponse.json({ error: 'Missing OpenAI API Key' }, { status: 500 });
   }

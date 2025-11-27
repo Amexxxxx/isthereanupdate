@@ -2,21 +2,8 @@ import { NextResponse } from 'next/server';
 import { getGames, saveGames, GameData } from '@/lib/store';
 import { fetchSiteContent } from '@/lib/scraper';
 import { parseGameUpdate } from '@/lib/openai';
-import { rateLimit } from '@/lib/rate-limit';
 
 export async function GET(request: Request) {
-  // Rate limit: 1 request per 5 minutes per IP to prevent spamming the update check
-  const ip = request.headers.get('x-forwarded-for') || 'unknown';
-  const { success } = rateLimit(ip, 'update', 1, 5 * 60 * 1000);
-
-  if (!success && process.env.NODE_ENV !== 'development') {
-    return NextResponse.json({ 
-      success: false, 
-      error: "Rate limit exceeded. Please wait a few minutes.",
-      logs: ["Rate limit exceeded."]
-    }, { status: 429 });
-  }
-
   const logs: string[] = [];
   const log = (msg: string) => {
     console.log(msg);
