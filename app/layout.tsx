@@ -13,8 +13,18 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Status.cc - Real-time live patch tracking",
-  description: "Real-time live patch tracking powered by Gemini AI. Checking official sources for Fortnite, Valorant, Rust, and Apex.",
+  title: "isthereanupdate.xyz",
+  description: "Real-time game update tracker.",
+  openGraph: {
+    title: "isthereanupdate.xyz",
+    description: "Real-time game update tracker.",
+    images: [], // Explicitly empty to avoid default image scraping
+  },
+  twitter: {
+    card: "summary", // Minimal card
+    title: "isthereanupdate.xyz",
+    description: "Real-time game update tracker.",
+  },
 };
 
 export default function RootLayout({
