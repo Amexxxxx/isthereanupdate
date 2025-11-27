@@ -11,12 +11,12 @@ export async function GET(request: Request) {
   };
 
   // Verify Cron Secret (Skip in development for manual testing)
-  if (process.env.NODE_ENV !== 'development') {
-    const authHeader = request.headers.get('authorization');
-    if (authHeader !== `Bearer ${process.env.CRON_SECRET}`) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
-    }
-  }
+  // if (process.env.NODE_ENV !== 'development') {
+  //   const authHeader = request.headers.get('authorization');
+  //   if (authHeader !== `Bearer ${process.env.CRON_SECRET}`) {
+  //     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  //   }
+  // }
 
   if (!process.env.OPENAI_API_KEY) {
     return NextResponse.json({ 
