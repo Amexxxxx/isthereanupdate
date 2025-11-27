@@ -1,0 +1,54 @@
+[
+  {
+    "name": "Fortnite",
+    "accentColor": "blue",
+    "version": "v38.10",
+    "lastUpdated": "November 11, 2025",
+    "description": "This update includes various adjustments and improvements for gameplay balancing.",
+    "sources": [
+      {
+        "name": "fortzone.gg",
+        "url": "https://www.fortzone.gg/updates"
+      }
+    ]
+  },
+  {
+    "name": "Valorant",
+    "accentColor": "red",
+    "version": "11.10",
+    "lastUpdated": "November 11, 2025",
+    "description": "The Harbor Rework is here! Along with QoL updates, balance updates to Clove, and bug fixes.",
+    "sources": [
+      {
+        "name": "playvalorant.com",
+        "url": "https://playvalorant.com/en-us/news/"
+      }
+    ]
+  },
+  {
+    "name": "Rust",
+    "accentColor": "orange",
+    "version": "1.16.0",
+    "lastUpdated": "November 24, 2025",
+    "description": "This update introduces significant progression changes, including Blueprint wipes and reductions in tech tree costs, along with new gameplay features like Mini Fridges and enhanced box sorting mechanics.",
+    "sources": [
+      {
+        "name": "store.steampowered.com",
+        "url": "https://store.steampowered.com/feeds/news/app/252490/?cc=US&l=english"
+      }
+    ]
+  },
+  {
+    "name": "Apex Legends",
+    "accentColor": "red",
+    "version": "27.0.2",
+    "lastUpdated": "November 26, 2025",
+    "description": "This update includes various map fixes on World's Edge and Broken Moon, audio and UI adjustments, and a resolution for server crashes when opening packs or entering matches.",
+    "sources": [
+      {
+        "name": "store.steampowered.com",
+        "url": "https://store.steampowered.com/feeds/news/app/1172470/?cc=US&l=english"
+      }
+    ]
+  }
+]
